@@ -1,0 +1,298 @@
+/* ===================================================
+   marketing.css - Marketing Portfolio Page Styles
+   Extends style.css - same design language
+   =================================================== */
+
+/* ── MARKETING HERO ── */
+.mkt-hero {
+  min-height: 55vh;
+  padding: calc(var(--nav-h) + 4rem) 2.5rem 3rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.mkt-hero-inner { max-width: 720px; }
+.mkt-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: .75rem 0 1.25rem;
+}
+.mkt-hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+.mkt-hero-sub {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-bottom: 2.5rem;
+}
+
+/* Hero stats row */
+.mkt-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem 2rem;
+  width: fit-content;
+}
+.mkt-stat { text-align: center; padding: 0 2rem; }
+.mkt-stat:first-child { padding-left: 0; }
+.mkt-stat:last-child  { padding-right: 0; }
+.mkt-stat-n {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  line-height: 1;
+}
+.mkt-stat-l {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 5px;
+  display: block;
+  line-height: 1.4;
+}
+.mkt-stat-div {
+  width: 1px;
+  height: 44px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── BRAND SECTION ── */
+.mkt-brand-section { border-top: 1px solid var(--border-lt); }
+.mkt-brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.mkt-brand-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 580px;
+  margin-top: .6rem;
+}
+.brand-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+  padding: 8px 18px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 99px;
+  transition: background .2s, color .2s;
+  flex-shrink: 0;
+}
+.brand-link:hover {
+  background: var(--accent);
+  color: #fff;
+  opacity: 1;
+}
+
+/* ── CAMPAIGN BLOCK ── */
+.campaign-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.campaign-block-reverse { direction: rtl; }
+.campaign-block-reverse > * { direction: ltr; }
+
+.campaign-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.campaign-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 99px;
+  width: fit-content;
+}
+.campaign-tag-traffic { background: var(--eng-lt);  color: var(--eng); }
+.campaign-tag-leads   { background: var(--mkt-lt);  color: var(--mkt); }
+.campaign-tag-content { background: var(--data-lt); color: var(--data); }
+
+.campaign-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.campaign-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.campaign-metrics {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: .5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-lt);
+  flex-wrap: wrap;
+}
+.metric { display: flex; flex-direction: column; gap: 3px; }
+.metric-n {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+}
+.metric-l {
+  font-size: 11px;
+  color: var(--subtle);
+}
+
+.campaign-screenshot {
+  background: var(--border-lt);
+  display: flex;
+  align-items: flex-start;
+}
+.campaign-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* ── REELS ── */
+.reels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.reel-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.reel-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  padding: 1.25rem 1.5rem .25rem;
+}
+.reel-desc {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 0 1.5rem 1rem;
+  line-height: 1.6;
+}
+.reel-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--border-lt);
+}
+.reel-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Single reel (full width) */
+.reel-block:not(.reels-grid .reel-block) {
+  margin-top: 1.5rem;
+}
+
+/* TikTok placeholder (can't embed TikTok directly) */
+.reel-tiktok { cursor: pointer; }
+.tiktok-thumb {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.tiktok-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color .2s;
+}
+.tiktok-placeholder:hover { color: var(--accent); }
+.tiktok-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* ── CTA SECTION ── */
+.mkt-cta-section {
+  text-align: center;
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-lt);
+}
+.mkt-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 500;
+  letter-spacing: -.5px;
+  margin-bottom: 1rem;
+}
+.mkt-cta-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  .mkt-hero { padding: calc(var(--nav-h) + 3rem) 1.25rem 2rem; }
+  .mkt-stats { flex-direction: column; gap: 1rem; width: 100%; }
+  .mkt-stat-div { width: 100%; height: 1px; }
+  .mkt-stat { padding: 0; }
+
+  .campaign-block { grid-template-columns: 1fr; }
+  .campaign-block-reverse { direction: ltr; }
+
+  .reels-grid { grid-template-columns: 1fr; }
+
+  .mkt-brand-header { flex-direction: column; align-items: flex-start; }
+}
